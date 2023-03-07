@@ -22,6 +22,9 @@ void Hand::plus_card(Deck deck) {
 	_count += deck.get_card().name;
 }
 
+int Card::get_suit() {
+	return _suit;
+}
 
 Deck::Deck() {
 
