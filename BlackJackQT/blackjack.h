@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <random>
 //player
 class Hand {
 private:
@@ -22,7 +24,6 @@ struct Card {
 	name name;
 	c_suit suit;
 };
-
 
 //deck
 class Deck {

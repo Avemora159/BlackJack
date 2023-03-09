@@ -24,7 +24,16 @@ void Hand::plus_card(Deck deck) {
 
 
 Deck::Deck() {
-
+	for (int j = 0; j < 4; j++) {
+		for (int i = 2; i <= 10; i++) {
+			deck.push_back(Card{ (name)i, (c_suit)j});
+		}
+		deck.push_back(Card{ J, (c_suit)j });
+		deck.push_back(Card{ Q, (c_suit)j });
+		deck.push_back(Card{ K, (c_suit)j });
+		deck.push_back(Card{ A, (c_suit)j });
+	}
+	std::shuffle(std::begin(deck), std::end(deck), std::default_random_engine());
 }
 
 Card Deck::get_card() {
